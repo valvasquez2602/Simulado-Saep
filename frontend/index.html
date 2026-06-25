@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoffeeHouse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="perfil-container">
+        <div class="perfil-conteudo">
+            <img id="empresa-logo" src="" alt="Logo CoffeeHouse" class="logo-empresa">
+            <h2 id="empresa-nome"></h2>
+            
+            <hr class="divisor">
+
+            <div class="metricas">
+                <div class="metrica-item">
+                    <span>Total de Pedidos:</span>
+                    <strong id="total-pedidos">0</strong>
+                </div>
+                <div class="metrica-item">
+                    <span>Total em Compras:</span>
+                    <strong id="total-compras">R$ 0,00</strong>
+                </div>
+            </div>
+        </div>
+
+        <button id="btn-sair" class="btn-sair">Sair</button>
+
+        <footer class="rodape">
+            <span class="rodape-texto">CoffeeHouse</span>
+            <div class="redes-sociais">
+                <img src="Instagram.svg" alt="Instagram" class="icone-rede">
+                <img src="Twitter.svg" alt="Twitter" class="icone-rede">
+                <img src="TikTok.svg" alt="TikTok" class="icone-rede">
+            </div>
+            <span class="copyright">Copyright-2024</span>
+        </footer>
+    </aside>
+
+    <main class="main-container">
+        <header class="main-header">
+            <div class="status-login" id="status-usuario">Modo Visitante (Funcionalidades Desabilitadas)</div>
+            <button id="btn-login" class="btn-login">Login</button>
+        </header>
+
+        <section class="filtros-secao">
+            <div class="filtros-container">
+                <button class="btn-filtro active" data-categoria="todos">Todos</button>
+                <button class="btn-filtro" data-categoria="café">Café</button>
+                <button class="btn-filtro" data-categoria="Lanches">Lanches</button>
+                <button class="btn-filtro" data-categoria="Sobremesas">Sobremesas</button>
+            </div>
+        </section>
+
+        <section class="produtos-secao" id="lista-produtos">
+            </section>
+
+        <section class="paginacao-secao">
+            <div class="paginacao-container" id="paginacao">
+                </div>
+        </section>
+    </main>
+
+    <div id="modal-login" class="modal">
+        <div class="modal-conteudo">
+            <h3>Área de Autenticação</h3>
+            <p>Você precisa estar logado para interagir com a página (filtros, paginação, curtidas e comentários).</p>
+            <button id="btn-simular-login">Simular Login com Sucesso</button>
+            <button id="btn-fechar-modal">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

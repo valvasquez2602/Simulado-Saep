@@ -1,0 +1,439 @@
+/* RESET E CONFIGURAÇÕES GERAIS */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@500;650;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 340px 1fr; /* Divisão bidimensional */
+    min-height: 100vh;
+    background-color: #0a0f1d; /* Fundo espaço/cyberpunk super escuro */
+    color: #c4d1ec;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.15rem;
+}
+
+/* ==========================================================================
+   2. PRIMEIRA COLUNA: COMPONENTE PERFIL (CYBER LABORATORY)
+   ========================================================================== */
+.perfil-container {
+    background-color: #4b2c25; /* Cor de fundo obrigatória (Regra 2.1) */
+    color: #fff8dc; /* Cor da fonte obrigatória (Regra 2.1) */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 25px;
+    border-right: 3px solid #6f493d;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.perfil-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-empresa {
+    width: 120px;
+    height: 120px;
+    border-radius: 0; /* Totalmente quadrado com corte tecnológico */
+    clip-path: polygon(20% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%, 0% 20%);
+    object-fit: cover;
+    margin-bottom: 25px;
+    border: 2px solid #fff8dc;
+    background-color: #111;
+}
+
+.perfil-conteudo h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 35px;
+    text-shadow: 0 0 10px rgba(255, 248, 220, 0.4);
+}
+
+/* Métricas em formato de Display Digital */
+.metricas {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.metrica-item {
+    background: #00000040;
+    border-left: 4px solid #fff8dc;
+    padding: 12px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.metrica-item span {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: rgba(255, 248, 220, 0.7);
+}
+
+.metrica-item strong {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: #fff8dc;
+}
+
+/* 3.1 BOTÃO SAIR (ESTILO ALERTA DE SISTEMA) */
+.btn-sair {
+    background: #00000030;
+    color: #a94442; /* Obrigatório (Regra 3.1) */
+    border-top: 2px solid #a94442; /* Obrigatório (Regra 3.1) */
+    border-bottom: 2px solid #a94442; /* Obrigatório (Regra 3.1) */
+    border-left: none;
+    border-right: none;
+    padding: 15px;
+    text-align: center; /* Obrigatório (Regra 3.1) */
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 25px;
+    transition: all 0.2s;
+}
+
+.btn-sair:hover {
+    background: #a94442;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(169, 68, 66, 0.6);
+}
+
+/* 4. COMPONENTE RODAPÉ (TIPO PLACA DE CIRCUITO INTEGRADO) */
+.rodape {
+    background-color: #f3e7d8; /* Obrigatório (Regra 4.1) */
+    color: #FFFFFF; /* Obrigatório (Regra 4.1) */
+    padding: 20px;
+    margin-top: 35px;
+    border: 1px dashed #4b2c25;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.rodape-texto {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    color: #4b2c25;
+    letter-spacing: 1px;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 20px;
+}
+
+.icone-rede {
+    width: 22px;
+    height: 22px;
+    filter: invert(10%) sepia(80%) saturate(1000%) hue-rotate(340deg); /* Contraste escuro no fundo bege */
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.icone-rede:hover {
+    transform: translateY(-3px) rotate(10deg);
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #5c473c;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   5. SEGUNDA COLUNA: COMPONENTE MAIN (CYBERGRID)
+   ========================================================================== */
+.main-container {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 30px 30px; /* Efeito quadriculado de fundo tecnológico */
+}
+
+/* 5.1 HEADER */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0e1626;
+    padding: 15px 25px;
+    border: 1px solid #1e293b;
+}
+
+.status-login {
+    font-size: 1rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.status-login.conectado {
+    color: #00ffcc;
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
+}
+
+.btn-login {
+    background-color: #FFFFFF; /* Obrigatório (Regra 5.1) */
+    color: #333333; /* Obrigatório (Regra 5.1) */
+    border: none;
+    padding: 8px 25px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0% 30%);
+    transition: all 0.2s;
+}
+
+.btn-login:hover {
+    background-color: #00ffcc;
+    color: #0a0f1d;
+}
+
+/* 5.2 SEÇÃO DE FILTROS (MÓDULO GEOMÉTRICO) */
+.filtros-secao {
+    display: flex;
+    justify-content: center;
+}
+
+.filtros-container {
+    background-color: #6f493d; /* Obrigatório (Regra 5.2) */
+    padding: 5px;
+    display: flex;
+    gap: 2px;
+    border: 1px solid #4b2c25;
+}
+
+.btn-filtro {
+    background: transparent;
+    border: none;
+    color: #FFFFFF; /* Obrigatório (Regra 5.2) */
+    padding: 12px 30px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s;
+}
+
+.btn-filtro.active, .btn-filtro:hover {
+    background-color: #4b2c25;
+    color: #fff8dc;
+}
+
+/* 6. LISTAGEM DE PRODUTOS (INTERFACE HOLOGRÁFICA) */
+.produtos-secao {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.produto-card {
+    background: #0e162690;
+    border: 1px solid #1e293b;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.produto-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 10px; height: 10px;
+    border-top: 2px solid #6f493d; border-left: 2px solid #6f493d;
+}
+
+/* 6.1 Título centralizado ao ícone */
+.produto-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.produto-icone {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 8px rgba(111, 73, 61, 0.6));
+}
+
+.produto-titulo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.15rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+/* Detalhes internos em formato "Data Sheet" */
+.produto-detalhes {
+    font-size: 1.05rem;
+    border-top: 1px solid #1e293b;
+    border-bottom: 1px solid #1e293b;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.produto-detalhes p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.produto-detalhes span {
+    color: #64748b;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.produto-preco-tag {
+    color: #00ffcc !important;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Interações nos cantos direitos (6.2.1) */
+.produto-interacoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.interacao-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    background: #1e293b50;
+    border: 1px solid #1e293b;
+    padding: 6px 14px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+}
+
+.interacao-item:hover {
+    border-color: #6f493d;
+    background: #6f493d20;
+}
+
+.icone-interacao {
+    width: 15px;
+    height: 15px;
+}
+
+/* 7. PAGINAÇÃO ESTRUTURAL */
+.paginacao-secao {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.paginacao-container {
+    display: flex;
+}
+
+.btn-page {
+    border: 1px solid #1e293b;
+    background: #0e1626;
+    color: #64748b;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.btn-page:hover {
+    color: #fff;
+    background: #1e293b;
+}
+
+/* 7.2 Ativo obrigatório */
+.btn-page.active {
+    background-color: #a94442; /* Obrigatório (Regra 7.2) */
+    color: #FFFFFF; /* Obrigatório (Regra 7.2) */
+    border-color: #a94442;
+    box-shadow: 0 0 10px rgba(169, 68, 66, 0.4);
+}
+
+/* 8. MODAL DE LOGIN TERMINAL */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(5, 9, 17, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-conteudo {
+    background-color: #0e1626;
+    border: 2px solid #6f493d;
+    padding: 40px;
+    max-width: 440px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+}
+
+.modal-conteudo h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.modal-conteudo p {
+    color: #64748b;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.modal-conteudo button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 12px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+#btn-simular-login {
+    background-color: #6f493d;
+    color: white;
+}
+
+#btn-fechar-modal {
+    background-color: #1e293b;
+    color: #cbd5e1;
+}
